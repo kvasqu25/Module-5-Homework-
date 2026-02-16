@@ -1,0 +1,678 @@
+
+
+/* ----- CUSTOM STYLES ----- */
+/* ----- GLOBAL/ROOT STYLES ----- */
+:root{
+    --lt-blue: #95ACBF;
+    --med-blue: #2A678C;
+    --green: #014023;
+    --orange-red: #A62F03;
+    --dk-red: #590202;
+
+    --white: #fff;
+    --off-white: #F2F2F2;
+    --rgba-off-white: rgba(242, 242, 242, 0.65);
+    --dk-gray: #222;
+    --lt-gray: #eaeaea;
+
+    --box-shadow-lg: -6px 6px 6px var(--dk-gray);
+    --box-shadow-sm: -3px 3px 3px var(--dk-gray);
+}
+
+/* ----- SKIP LINK STYLES FROM WEB-AIM ----- */
+#skip{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    color: var(--dk-gray);
+}
+
+#skip:focus{
+    position: static;
+    width: auto;
+    height: auto;
+    display: block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    outline: 4px solid var(--orange-red);
+}
+
+body{
+    font-family: sans-serif;
+    line-height: 1.35;
+    color: var(--dk-gray);
+    margin: 0;
+    background-color: #f2f2f2;
+    background-image: url("images/concrete-wall.png");
+    box-sizing: border-box;
+}
+
+/* ----- HEADER STYLES ----- */
+header{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--green);
+    color: var(--white);
+    width: calc(100% - 2rem);
+    max-width: calc(1200px - 2rem);
+    margin: 0 auto;
+    border-radius: 0 0 60px 60px;
+}
+
+header img{
+    width: 75px;
+    height: auto;
+}
+
+/* ----- HEADING STYLES ----- */
+h1, h2, h3, h4{
+    margin: 0.5rem 0;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+h2{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+h3{
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+h4{
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* ----- NAVIGATION STYLES ----- */
+nav{
+    grid-column: 1/-1;;
+}
+
+nav ul{
+    padding: 0;
+    list-style-type: none;
+}
+
+nav a{
+    text-decoration: none;
+    background-color: var(--white);
+    color: var(--dk-gray);
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border: 2px solid var(--white);
+    border-radius: 32px;
+    margin: 1rem auto;
+    max-width: 300px;
+}
+
+nav a:hover{
+    background-color: var(--green);
+    color: var(--white);
+}
+
+a:focus{
+    outline: 4px solid var(--orange-red);
+    outline-offset: 1px;
+}
+
+nav a[aria-current]{
+    background-color: var(--green);
+    color: var(--white);
+}
+
+nav a[aria-current]:hover{
+    background-color: var(--white);
+    color: var(--green);
+    
+}
+
+/* ----- IMAGE STYLES ----- */
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* ----- LINK STYLES ----- */
+a{
+    display: block;
+    padding: 1rem;
+}
+
+header > a{
+    border: 4px solid var(--green);
+    border-radius: 50%;
+    max-width: 75px;
+}
+
+header > a:hover{
+    border: 4px solid var(--lt-gray);
+}
+
+h1 a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+h1 a:hover{
+    text-decoration: underline;
+}
+
+#view-menu{
+    background-color: var(--orange-red);
+    font-weight: bold;
+    color: var(--white);
+    width: fit-content;
+    margin: 1rem auto;
+    text-decoration: none;
+    border-radius: 32px;
+    box-shadow: var(--box-shadow-lg);
+}
+
+/* ----- MAIN STYLES ----- */
+main{
+    padding: 1rem;
+    max-width: calc(1200px - 2rem);
+    margin: 0 auto;
+    background-color: var(--rgba-off-white);
+    display: grid;
+}
+
+main > p{
+    font-size: 1.1rem;
+}
+
+/* ----- DECORATIVE LINES OF NOODLES ----- */
+.noodle-line{
+    height: 20px;
+    width: 80%;
+    margin: 1rem auto;
+    background: center url("images/wavy-line.png");
+}
+
+/* ----- TEXT STYLES ----- */
+p{
+    padding: 0.5rem 0;
+    max-width: 65ch;
+    margin: 0 auto;
+}
+
+/* ----- FORM STYLES ----- */
+form{
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.required{
+    color: var(--dk-red);
+    font-weight: bold;
+}
+
+input, label, textarea{
+    display: block;
+    font-size: 1.1rem;
+}
+
+label{
+    margin: 0.5rem 0 0.25rem 0;
+}
+
+input{
+    height: 24px;
+}
+
+textarea{
+    height: 70px;
+}
+
+input, textarea{
+    padding: 0.25rem;
+    border: 2px solid var(--dk-gray);
+    width: calc(100% - 0.75rem);
+    border-radius: 4px;
+}
+
+input:focus, input:focus-visible, textarea:focus, textarea:focus-visible{
+    outline: 2px solid var(--orange-red);
+    outline-offset: 1px;
+}
+
+#my-submit{
+    padding: 1rem;
+    margin: 1rem auto;
+    background-color: var(--green);
+    color: var(--white);
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 32px;
+    max-width: 200px;
+    height: auto;
+}
+
+#my-submit:hover{
+    background-color: var(--white);
+    color: var(--green);
+}
+
+/* ----- FOOTER STYLES ----- */
+footer{
+    padding: 2rem 1rem;
+    background-color: var(--green);
+    color: var(--white);
+    text-align: center;
+    max-width: calc(1200px - 2rem);
+    margin: 0 auto;
+    border-radius: 60px 60px 0 0;
+}
+
+/* ----- HOME PAGE STYLES ----- */
+
+#view-menu:hover{
+    box-shadow: var(--box-shadow-sm);
+}
+
+#about{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#about img{
+    border-radius: 50%;
+    filter: drop-shadow(-6px 6px 6px var(--dk-gray));
+    width: 100%;
+    max-width: 275px;
+    margin: 0 auto 2rem auto;
+}
+
+#about h3{
+    width: 75%;
+}
+
+#about h3, #contact h3{
+    background-color: var(--med-blue);
+    color: var(--white);
+    padding: 1rem 2rem;
+    margin: 0 auto 1rem auto;
+    border-radius: 32px;
+}
+
+#about > section{
+    margin: 1.5rem auto;
+}
+
+#about h4{
+    background-color: var(--med-blue);
+    color: var(--white);
+    padding: 1rem 2rem;
+    margin: 1rem auto;
+    width: fit-content;
+    border-radius: 32px;
+}
+
+address{
+    font-style: normal;
+    width: fit-content;
+    margin-left: 4px;
+}
+
+address a{
+    padding: 0.75rem 0;
+    color: var(--orange-red);
+    text-decoration: none;
+}
+
+address a:hover{
+    text-decoration: underline;
+}
+
+table{
+    border-collapse: collapse;
+    width: 225px;
+    margin: 6px auto;
+}
+
+th{
+    font-size: 1.1rem;
+}
+
+tbody tr{
+    border-bottom: 2px solid var(--orange-red);
+}
+
+td{
+    padding: 0.5rem;
+}
+
+#contact{
+    max-width: 700px;
+    margin: 1rem auto;
+}
+
+/* ----- MENU PAGE STYLES ----- */
+#menu-btns{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem 0 2rem 0;
+    list-style-type: none;
+}
+
+#menu-btns a{
+    background-color: var(--lt-blue);
+    color: var(--dk-gray);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: var(--box-shadow-lg);
+    border-radius: 32px;
+}
+
+#menu-btns a:hover{
+    box-shadow: var(--box-shadow-sm);
+}
+
+#apps, #salads, #entrees, #sides, #dessert{
+    width: 100%;
+    max-width: 1000px;
+    margin: 1rem auto 3rem auto;
+    display: grid;
+}
+
+#apps h2, #salads h2, #entrees h2, #sides h2, #dessert h2{
+    padding: 1rem 2rem;
+    background-color: var(--med-blue);
+    color: var(--white);
+    border-radius: 48px;
+    text-align: left;
+}
+
+#apps h3, #salads h3, #entrees h3, #sides h3, #dessert h3{
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+#apps img, #salads img, #entrees img, #sides img, #dessert img{
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+h3 span{
+    background-color: var(--green);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 32px;
+    font-size: 1rem;
+}
+
+/* ----- BACK TO TOP OF PAGE LINK STYLES ----- */
+.btt{
+    width: fit-content;
+    text-decoration: none;
+    background-color: var(--lt-blue);
+    color: var(--dk-gray);
+    box-shadow: var(--box-shadow-lg);
+    border-radius: 32px;
+    font-size: 1rem;
+    font-weight: bold;
+    justify-self: end;
+}
+
+main > .btt{
+    margin: 16px 0;
+}
+
+section > .btt{
+    margin: 16px 0 0 0;
+}
+
+.btt:hover{
+    box-shadow: var(--box-shadow-sm);
+}
+
+.btt::before{
+    content: "\21E7\00A0\00A0";
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* ----- MEDIA QUERIES FOR RESPONSIVE SITE ----- */
+@media screen and (min-width: 450px){
+    h1{
+        font-size: 3rem;
+    }
+    
+    h2{
+        font-size: 2.5rem;
+    }
+    
+    h3{
+        font-size: 1.5rem;
+    }
+    
+    h4{
+        font-size: 1.25rem;
+    }
+
+    address{
+        margin: 1rem auto;
+    }
+
+    #apps img, #salads img, #entrees img, #sides img, #dessert img{
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 650px){
+
+    header{
+        grid-template-columns: 1fr 4fr;
+    }
+
+    nav ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+
+    #about > section{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    #about h4{
+        grid-column: 1/-1;
+    }
+
+    #apps, #salads, #entrees, #sides, #dessert{
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0 1rem;
+    }
+
+    #apps h2, #salads h2, #salads > p, #entrees h2, #sides h2, #dessert h2{
+        grid-column: 1/-1;
+    }
+    
+    #apps h3, #salads h3, #entrees h3, #sides h3, #dessert h3{
+        width: 100%;
+        display: grid;
+        gap: 16px;
+        /* padding: 1.25rem 0.5rem; */
+        justify-content: stretch;
+        align-items: normal;
+    }
+
+    h3 span{
+        display: block;
+        width: 50px;
+        padding: 1rem 0.1rem;
+        justify-self: end;
+        margin-right: 30px;
+    }
+
+    section > .btt{
+        grid-column: 1/-1;
+    }
+}
+
+@media screen and (min-width: 900px){
+    header{
+        grid-template-columns: 0.75fr 1fr;
+        padding: 2rem;
+        width: calc(100% - 4rem);
+        max-width: calc(1200px - 4rem);
+    }
+
+    header > a{
+        justify-self: end;
+    }
+
+    nav ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+
+    main{
+        padding: 2rem;
+    }
+
+    main > p{
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .noodle-line{
+        margin: 2rem auto;
+    }
+
+    form{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 1rem 0.5rem;
+    }
+
+    label{
+        text-align: right;
+    }
+
+    #my-submit{
+        grid-column: 1/-1;
+        justify-self: end;
+    }
+
+    footer{
+        padding: 2rem;
+    }
+
+    #about{
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        align-items: center;
+    }
+
+    #about > a, #about > section, #about h4{
+        grid-column: 1/-1;
+    }
+
+    #about img{
+        width: 80%;
+        max-width: 375px;
+    }
+    
+    #about > section{
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 2rem;
+        align-items: center;
+        width: fit-content;
+        margin: 3rem auto;
+    }
+
+    address a{
+        padding: 0.25rem 0;
+    }
+
+    table{
+        width: 100%;
+    }
+    
+    th{
+        font-size: 1.25rem;
+    }
+
+    #contact{
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 1rem;
+    }
+    
+    #contact h3{
+        grid-column: 1/-1;
+        width: 50%;
+    }
+
+    form{
+        max-width: 400px;
+    }
+
+    #menu-btns{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 1rem 0 2rem 0;
+        list-style-type: none;
+    }
+
+    #apps h3, #salads h3, #entrees h3, #sides h3, #dessert h3{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    header{
+        grid-template-columns: 0.5fr 3fr 4fr;
+        padding: 1rem;
+    }
+
+    nav{
+        grid-column: auto;
+    }
+
+    #apps h3, #salads h3, #entrees h3, #sides h3, #dessert h3{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 8px;
+        align-items: center;
+    }
+
+    h3 span{
+        width: 100%;
+        margin: 0;
+    }
+
+    #apps img, #salads img, #entrees img, #sides img, #dessert img{
+        width: 100%;
+    }
+}
